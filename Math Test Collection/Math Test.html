@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Math Test</title>
+    <meta name="description" content="This is a math test to evaluate your level of math skillset and intelligence. Recepients of the test will be scored and be told which class their skill level matches with. Do not add units of measurment, only digits. Calculators are absolutely prohibited unless specified by the question.">
+    <link rel="stylesheet" href="Math.css">
+    <script src="Math.js" defer> </script>
+</head>
+<body>
+    <div id="intro" class="page">
+        <header>Math Test</header>
+        <main>This is a math test to evaluate your level of math skillset and intelligence. Recepients of the test will be scored and be told which class their skill level matches with. Questions asked will become more difficult as the test goes on starting from a level of Connected Math 1 and ending at a level of Honors Trigonometry/ Algebra II. Be sure to read through the questions carefully and answer in the text box provided. Please represent your answer in the way the questions ask for (decimals, fractions, etc.) otherwise no credit will be received. This assessment is not timed, so please take as long as you desire. The test is also not graded nor plays a role in your education. Calculators are absolutely prohibited unless specified by the question.</main>
+        <button onclick="switcharoo('question1')">Begin Test</button>
+    </div>
+    <div id="question1" class="poof page">
+        <header>Question 1:</header>
+        <main>
+            <img src="Apples.jpg">
+            Bob orginally had 25 apples that he plucked from his trees on his farm. Chuck, his friend, added 300 percent more apples into Bob's collection, but unfortunately, Chuck's wife, Jill, took 9 apples from the collection to make an apple pie. Eventually, Bob, divided the apples into seven groups, and sold those groups of apples to neighbors. How many apples were there per group? Please enter the number of apples in digits.
+            <br>
+            <form data-answer="13" data-next="question2">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <div id="question2" class="poof page">
+        <header>Question 2:</header>
+        <main>
+            <img src="Amtrak.jpg">
+            Winston took a train for 931 miles from Union Station in Washington DC to Miami. He then realized he should have stopped at his grandmother's house instead, so he drove 1/4 of the length of the train ride to his grandmother's house. After that, he had to drive another 103 miles to attend a barbacque eating competition. How many miles did Winston travel in total? Please express your answer as the most simplified improper fraction (15/2).
+            <br>
+            <form data-answer="1343/4" data-next="question3">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <div id="question3" class="poof page">
+        <header>Question 3:</header>
+        <main>
+            <img src="Lobster.jpg">
+            Arlo's lobster shack in Maine caught 5x - 2 lobsters on one day. On the same day, Rebecca's clam chowder restaurant in Boston caught 3x + 4 clams to turn into delicious clam chowder, the same number of pieces of seafood Arlo caught that day. Rebecca and Arlo both have to report to their state governments how many pieces of seafood they caught that day. How many pieces of seafood did Arlo and Rebecca catch together in total?
+            <br>
+            <form data-answer="26" data-next="question4">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <div id="question4" class="poof page">
+        <header>Question 4:</header>
+        <main>
+            <img src="Algebra.jpg">
+            Solve the system of equations: -14=-20y - 7x and 10y + 4=2x. You may use any means to solve this problem but calculators are still prohibited. Graphing, substitution, and elimation to solve this problem are preferred. Express your answer as an ordered pair and be sure not to add any spaces (example: (5,3) or (6,8). Answering in any other format will cause you to receive no credit for completing this question.
+            <br>
+            <form data-answer="(2,0)" data-next="question5">
+                <input type="text">
+                <input type="submit" value="Submit">                
+            </form>
+        </main>
+    </div>
+    <div id="question5" class="poof page">
+        <header>Question 5:</header>
+        <main>
+            <img src="Boston.jpg">
+            Abby bought an apartment on the Boston waterfront. Due to waterfront property being so expensive, the apartment Abby bought was a small triangle with 90 degree, 60 degree, and 30 degree interior angles. When measuring to see if her furniture and paintings from her old home would fit in her new apartment, she found that the wall opposite of the 90 degree angle was four yards. How long would be the wall opposite of the 30 degree angle?
+            <br>
+            <form data-answer="2" data-next="question6">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <div id="question6" class="poof page">
+        <header>Question 6:</header>
+        <main>
+            <img src="Rainier.jpg">
+            Benjamin and his mountain crew climbed up Mount Rainier and set up a triangular-shaped camp near the summit. The sides of the camp were 11.6 yards, 15.2 yards, and 7.4 yards. For scientific reasons, Benjamin wants to know the measure of the interior angle of the triangle opposite to the side that measures 7.4 yards. What is the measure of that interior angle? Round your answer to the nearest tenth. You are permitted to use a calculator.
+            <br>
+            <form data-answer="28.2" data-next="fin">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <div id="fin" class="poof page">
+        <header>Self-Evaluation:</header>
+        <main>
+            <img src="Emotion.jpg">
+            Final question! Please click either the "difficult" button or the "easy" button so we can identify your overall experience while taking this math tast. We know through studies that self-evaluation is absolutely critical for learning, and an online test is no exception. We also know that for a lot of you, this experience was neither difficult nor easy, so in that case, please click the one that you feel closest to. 
+            <br>
+            <button onclick="setHonors(true)">Easy</button>
+            <button onclick="setHonors(false)">Difficult</button>
+        </main>
+    </div>
+    <div id="end" class="poof page">
+        <header>Results:</header>
+        <aside>
+            <section>
+                <div class="subHeader">
+                    Score:
+                </div>
+                <div id="escorecorrectness">
+                </div>
+                <div id="escorepercent">
+                </div>
+            </section>
+            <section>
+                <div class="subHeader">
+                    Placement:
+                </div>
+                <div id=eplaceanswer>
+                </div>
+                <div id=eplacecorrectness>
+                </div>
+            </section>
+        </aside>
+        <main>
+            <div class="subHeader">
+                <img src="" id="x">
+                Description:
+            </div>
+            <div id="despre">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
