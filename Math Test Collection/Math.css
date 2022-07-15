@@ -13,6 +13,7 @@ div.page {
     min-height:100vh;
     width:calc(100vw*2/3);
     margin:auto;
+    overflow:hidden;
     box-sizing:border-box;
     padding-left:4em;
     padding-right:4em;
