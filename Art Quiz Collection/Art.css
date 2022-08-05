@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+body{
+    margin: 0em;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 13pt;
+    color: black;
+    background-color: snow;
+    text-align: justify;
+}
+
+.page {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.page header {
+    background-image: url(La\ Joconde.jpg);
+    background-size: 100% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: snow;
+}
+
+header h1 {
+    font-size: 55pt;
+    font-weight: 400;
+    margin-top: 0.75em;
+    margin-bottom: 0.20em;
+    font-family:'UnifrakturMaguntia', cursive;
+}
+
+main h2 {
+    font-size: 25pt;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-left: 2em;
+    color: black;
+}
+
+.page main img {
+    float:right;
+    width:40%;
+    margin-top: 3em;
+    margin-right:3em;
+    margin-left: 3em;
+}
+
+.topContainer {
+    display: flex;
+    height: 43.4em;
+}
+
+.imageContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#about .imageContainer {
+    float: right;
+    margin-right: 6em;
+}
+
+.page main .imageContainer img {
+    width: 100%;
+}
+
+#feedback .imageContainer {
+    margin-right: 3em;
+    margin-left: 3em;
+    width: 40%;
+    float: right;
+}
+
+#feedback .imageContainer img {
+    margin-left: 0;
+}
+
+.textContainer {
+    width: 60%;
+}
+
+.twoColumns {
+    flex-direction: row-reverse;
+}
+
+textarea {
+    width: 30.5em;
+    height: 15em;
+    font-size: 14pt;
+    font-family: 'EB Garamond', serif;
+    color: black;
+}
+
+.specialContainer {
+    text-align: center;
+}
+
+.special {
+    color: black;
+    font-family: 'EB Garamond', serif;
+    font-size: 15pt;
+    width: 7em;
+    margin-top: 1.3em;
+    text-align: center;
+}
+
+.topContainer header {
+    max-width: 17.5em;
+    min-width: 17.5em;
+    text-align: center;
+}
+
+.smallHeader a {
+    display: inline-block;
+    font-size: 26pt;
+    color: snow;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    margin-top: 0.4em;
+}
+
+.smallHeader a:hover {
+    text-decoration: underline;
+}
+
+div#text {
+    font-size: 15pt;
+    margin-left: 3.3em;
+    margin-right: 3.3em;
+}
+p#boldText {
+    font-size: 17pt;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.topContainer main {
+    width: auto;
+}
+
+.buttonContainer {
+    padding-top: 0em;
+    display: grid;
+    gap: 1em;
+}
+
+.buttonContainer button {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 15pt;
+}
+
+button.one {
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+button.two {
+    grid-column: 2;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+button.three {
+    grid-column: 1;
+    grid-row: 2;
+    cursor: pointer;
+}
+
+button.four {
+    grid-column: 2;
+    grid-row: 2;
+    cursor: pointer;
+}
+
+button.five {
+    grid-column: 1;
+    grid-row: 3;
+    cursor: pointer;
+}
+
+button.six {
+    grid-column: 2;
+    grid-row: 3;
+    cursor: pointer;
+}
+
+button.seven {
+    grid-column: 1;
+    grid-row: 4;
+    cursor: pointer;
+}
+
+button.eight {
+    grid-column: 2;
+    grid-row: 4;
+    cursor: pointer;
+}
+
+button.nine {
+    grid-column: 1;
+    grid-row: 5;
+    cursor: pointer;
+}
+
+button.ten {
+    grid-column: 2;
+    grid-row: 5;
+    cursor: pointer;
+}
+
+.resultContainer {
+    padding-top: 0em;
+    display: grid;
+    gap: 1em;
+}
+
+.resultContainer div {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 15pt;
+}
+
+div#ecorrectanswers {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+div#epercentage {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+div#elettergrade {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+div#egpa {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+div.poof{
+    display: none;
+}

@@ -1,0 +1,478 @@
+<html>
+<head>
+    <title>Art Quiz</title>
+    <meta name="description" content="Welcome to the Art Quiz! This is a quiz that will assess you on a variety of notable paintings and artwork creators. At the end, the program will tell you how many questions you have gotten correct and will match you to an artwork creator based on your score. Enjoy the game!">
+    <link rel="stylesheet" href="Art.css">
+    <script src="Art.js" defer> </script>
+</head>
+<body>
+    <div id="description" class="page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:specialSwitcharoo('theQuestion');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="PearlEarring.jpg">
+                <h2>
+                    Description:
+                </h2>
+                <div id="text">
+                    <p>Hello! Welcome to the Art Quiz! In this game, the program will ask you several multiple-choice questions on notable pieces of art, including who were their creators, when were they made, and where these pieces of artwork are located now. The questions will also give some brief facts about the artwork so you can learn more information about them.</p>
+                    <p>At the end of the quiz, the program will tell you how many questions you got right, your percentage of correct answers, and it will give you a letter grade. Unlike some other art quizzes on the internet, the program will also match you to a famous artist based on the grade that you received on your quiz, and it will tell you a few facts about who they were.</p>
+                    <p>Please note that this game may not be fit for use on mobile devices or on certain kinds of browsers. If you are playing on a normal computer, make sure that your screen is maximized, otherwise you may be unable to see properly. Also, if you are playing in the future, some of these pieces of artwork may have been moved to other museums than the ones specified in the quiz. Enjoy the game!</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="about" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:specialSwitcharoo('theQuestion');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <div class="imageContainer">
+                    <img src="Fruit.jpg">
+                    <img src="StarryNight.jpg">
+                </div>
+                <h2>
+                    About:
+                </h2>
+                <div id="text">
+                    <p>The author created this website out of concern for visual art. Nowadays, less people are painting, sculpting, drawing, and are instead moving their talents to other activities. People are starting to visit art museums less, and artists, once famous, are slowly being forgotten. It's crucially important that people remember these pieces of artwork and that the artwork stays immortal forever.</p>
+                    <p>If you want to help save art, you already are! You're on this website! You can also visit your nearby art museums (there's a lot of art you haven't seen yet). If you do not wish to pay the large museum entry fees, try to find museums online that are free. All the museums in the Smithsonian are free, meaning that you don't have to pay to go to the National Gallery of Art (if you decide to go there, we recommend seeing Thomas Cole's Voyage of Life) or the National Portrait Gallery.</p>
+                    <p>If you are willing to spend some money, you can help by going to places like the Metropolitan Museum of Art. There, you can go see the Great Wave off Kanagawa print, Washington Crossing the Deleware, the Death of Socrates, the Water Lily Pond, and tons of temporary exhibits.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="feedback" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:specialSwitcharoo('theQuestion');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main class="twoColumns">
+                <div class="imageContainer">
+                    <img src="DeathofSocrates.png">
+                    <img src="StillLife.jpg">
+                </div>
+                <div class="textContainer">
+                    <h2>
+                        Feedback:
+                    </h2>
+                    <div id="text">
+                        <p>Just like other websites on the internet, we appreciate your feedback for us, whether it's constructive criticism or a compliment. We know that it's you who can help improve the website, thus this page. if you want to send a message to us, please type your feedback in the box directly below this paragraph. To submit, click the light gray submit button, and your message will disappear and be sent to the website team.</p>
+                        <textarea></textarea>
+                        <div class=specialContainer>
+                            <button onclick="clearBox()" class="special">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question1" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question1');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Michelangelo.jpg">
+                <h2>
+                    Question 1:
+                </h2>
+                <div id="text">
+                    <p>Where is this fresco located today?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question2')" class="one">St. Clement Basilica in Rome</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="two">Cathedral of Florence in Italy</button>
+                        <button onclick="grade(1); switcharoo('question2')" class="three">Sistine Chapel in the Vatican</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="four">Cathedral of Barcelona in Spain</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="five">St. Peter's Basilica in the Vatican</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="six">Catedral de la Almudena in Spain</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="seven">Sagrada Familia in Barcelona</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="eight">Basilica of St. Mark in Venice</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="nine">Duomo di Milano in Milan, Italy</button>
+                        <button onclick="grade(0); switcharoo('question2')" class="ten">Cologne Cathedral in Germany</button>
+                    </div>
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The Creation of Adam fresco was created by Michelangelo during the 16th century. It took four years to completely create, starting in 1508 and completed by 1512. The fresco measures 9 feet and 2 inches by 18 feet and 8 inches and is located on a ceiling. While the painting does also contain Adam and God, the coder was not able to secure an image of the full fresco, thus you can only see the hands.</p>
+                    <p>The fresco also contains more than 300 different figures and is in a place owned by the Roman Catholic Church. The ceiling where the fresco is located also contains many other frescos, though the Creation of Adam is the most notable, and it attracts millions of visitors every year. Adam was painted to look similar to God, referencing the Bible on how man was created in God's image.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question2" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question2');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="SchoolofAthens.jpg">
+                <h2>
+                    Question 2:
+                </h2>
+                <div id="text">
+                    <p>Who created this fresco?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question3')" class="one">Michelangelo</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="two">Tiziano Vecellio</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="three">Giovanni Bellini</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="four">Donatello</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="five">Sandro Botticelli</button>
+                        <button onclick="grade(1); switcharoo('question3')" class="six">Raphaello Sanzio</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="seven">Leonardo Da Vinci</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="eight">Caravaggio</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="nine">Giotto di Bondone</button>
+                        <button onclick="grade(0); switcharoo('question3')" class="ten">Masaccio</button>
+                    </div>
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The School of Athens is another fresco painted between 1509 and 1511. The pope at the time, Pope Julius II, commissioned the fresco to be located in one of the rooms known as the Stanza della Segnatura, in the Apostolic Palace at the Roman Catholic Church's Vatican. The fresco represents the Renaissance and the rebirth of Greek ideas and philosophy, something that was quickly gaining popularity at the time.</p>
+                    <p>The fresco is one of the frescoes in the Stanza della Segnatura, the other ones being the La Disputa, the Cardinal and Theological Virtues, and the Parnassus, also created by the same painter. Thousands of people come to the Vatican every year to see the School of Athens, making it one of the most well-known pieces of artwork in the world. If you look closely, you can see some Renaissance figures made to look like Greek scholars.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question3" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question3');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Vermeer.jpg">
+                <h2>
+                    Question 3:
+                </h2> 
+                <div id="text">
+                    <p>Who made this painting?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question4')" class="one">Peter Paul Rubens</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="two">Rembrandt</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="three">Diego Velázquez</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="four">Peter Lely</button>
+                        <button onclick="grade(1); switcharoo('question4')" class="five">Johannes Vermeer</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="six">Luca Giordano</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="seven">Carel Fabritius</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="eight">Claude Lorrain</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="nine">Jusepe de Ribera</button>
+                        <button onclick="grade(0); switcharoo('question4')" class="ten">Frans Hals</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The Milkmaid, created sometime between 1657 and 1661, is one of the most well-known European art classics. It measures about 16 inches by 18 inches and is currently displayed at the Rijksmuseum in Amsterdamn. The painting is made from oil on canvas, one of the only ways how to paint before the creation of acrylic and other dyes. Though it is not for auction, the value of the painting would be around 30 million dollars.</p>
+                    <p>Like a lot of other paintings at the time, the painter used white lead to give the painting its glow. Unfortunately, it can cause lethal lead poisoning, and it probably was not good for the painter's health. The Milkmaid has been showed in museums around the world, most notably in the United States where it had to be kept during World War II because the museum in Amsterdam was invaded.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question4" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question4');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Farmers.jpg">
+                <h2>
+                    Question 4:
+                </h2> 
+                <div id="text">
+                    <p>Who created this painting?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question5')" class="one">Roy Lichtenstein</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="two">Judy Chicago</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="three">Jackson Pollock</button>
+                        <button onclick="grade(1); switcharoo('question5')" class="four">Grant Wood</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="five">Andy Warhol</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="six">Edward Hopper</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="seven">Mark Rothko</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="eight">Jasper Johns</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="nine">Augusta Savage</button>
+                        <button onclick="grade(0); switcharoo('question5')" class="ten">Norman Rockwell</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The American Gothic was painted in 1930 by using oil paint on beaverboard. It is known by some as the most American piece of artwork that there is. Currently, it is displayed at the Art Institute of Chicago, a museum seen by over a million visitors every year. The painting has been in a few museums outside of the United States including at the Musée de l'Orangerie in Paris and at the Royal Academy of Arts in London.</p>
+                    <p>The people in the painting are actually real people, one of which was the artist's sister and the other was the family's dentist. The Dibble House, the house in the background, is also real, and is located in Eldon, Iowa. It is listed on the National Register of Historic Places. Today, you can go to the house and are encouraged to dress up like the people in the painting and take a picture outside of the home.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question5" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question5');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Ginevra.jpg">
+                <h2>
+                    Question 5:
+                </h2> 
+                <div id="text">
+                    <p>Where is this painting located now?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question6')" class="one">Art Institute of Chicago</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="two">Metropolitan Museum of Art</button>
+                        <button onclick="grade(1); switcharoo('question6')" class="three">National Gallery of Art</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="four">Philadelphia Museum of Art</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="five">Museum of Fine Arts, Boston</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="six">Seattle Art Museum</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="seven">National Portrait Gallery</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="eight">Detroit Institute of Arts</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="nine">Art Gallery of Ontario</button>
+                        <button onclick="grade(0); switcharoo('question6')" class="ten">The Ottawa Art Gallery</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>Ginevra de' Benci is the only painting created by Leonardo da Vinci located today in the Western Hemisphere. The painting depicts Leonardo's sister, probably to commemorate her marriage to Luigi di Bernardo Niccolini. Leonardo started the painting in 1474 and finished it in 1478. Created with oil paint on wood panel, it measures about 15 inches by 15 inches and is double-sided unlike other European paintings.</p>
+                    <p>The hands of the woman on the painting are though to have been lost, though we can guess how they would have looked through Leonardo's sketches. Even though the painting is permanently in the collection of a museum, the price tag of the Ginevra de' Benci would be 350 million dollars. Just like the Mona Lisa, the painting uses a special technique so no matter where you are, Ginevra appears to be staring at you.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question6" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question6');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Seascape.jpg">
+                <h2>
+                    Question 6:
+                </h2> 
+                <div id="text">
+                    <p>Who created this impressionist painting?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question7')" class="one">Claude Monet</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="two">Camille Pissarro</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="three">Edgar Degas</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="four">Berthe Morisot</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="five">Mary Cassatt</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="six">Pierre-Auguste Renoir</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="seven">Édouard Manet</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="eight">Eliseu Visconti</button>
+                        <button onclick="grade(1); switcharoo('question7')" class="nine">Vincent Van Gogh</button>
+                        <button onclick="grade(0); switcharoo('question7')" class="ten">Paul Cézanne</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The painting takes place on the bank of the Mediterranean fishing village of Saintes-Maries-de-la-Mer. The painting is part of a much larger collection when the artist painted the sea in 1888. The painting measures about 20 inches by 25 inches, and the artist painted probably with a combination of natural and synthetic oils. It is currently located in a museum seen by millions in Amsterdam, the Netherlands.</p>
+                    <p>The artist who painted the sea stated that it was incredibly difficult to paint the Mediterranean due to the fact that the color of the sea would constantly change. To make their signature stand out, the artist signed their name in a blood red color in the foreground (you can't see it in the picture). The painting has been displayed around the world including in Budapest, Vienna, New York, Toronto, Tokyo, and Los Angeles.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question7" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question7');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Bull.jpg">
+                <h2>
+                    Question 7:
+                </h2> 
+                <div id="text">
+                    <p>Where is this cave painting located?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('question8')" class="one">Lascaux Caves</button>
+                        <button onclick="grade(1); switcharoo('question8')" class="two">Cave of Altamira</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="three">Serra da Capivara</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="four">El Castillo</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="five">Laas Gaal</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="six">Serra da Capivara</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="seven">Leang Tedongnge</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="eight">Magura Cave</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="nine">Maltravieso Cave</button>
+                        <button onclick="grade(0); switcharoo('question8')" class="ten">Cueva de las Manos</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The cave paintings on these walls date earliest back to the Upper Paleolithic Age, around 36,000 years ago. The main cave hall shows bison on the roof of the cave (shown in the picutre) created by a variety of colors. To create the painting, artists probably used the mediums of charcoal, ochre, and/or hematite, and by applying these colors in certain ways, it gives of a sense of depth from the constrast of the paint colors.</p>
+                    <p>The place with this cave painting was declared a UNESCO World Heritage Site in 1985 and was preserved when a falling tree disturbed rocks, sealing off the entrance from the outside. Most unfortunately, visitors are not allowed to see the cave paintings due to extremely important conservation reasons, but replicas exist elsewhere and images of these cave paintings can be found all over the internet.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="question8" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question8');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="Wave.jpg">
+                <h2>
+                    Question 8:
+                </h2> 
+                <div id="text">
+                    <p>Challenge Question: Who made this woodblock print?</p>
+                    <div class="buttonContainer">
+                        <button onclick="grade(0); switcharoo('results')" class="one">Torii Kiyonobu I</button>
+                        <button onclick="grade(0); switcharoo('results')" class="two">Utagawa Hiroshige</button>
+                        <button onclick="grade(0); switcharoo('results')" class="three">Hasegawa Tōhaku</button>
+                        <button onclick="grade(0); switcharoo('results')" class="four">Kawanabe Kyōsai</button>
+                        <button onclick="grade(0); switcharoo('results')" class="five">Tawaraya Sōtatsu</button>
+                        <button onclick="grade(0); switcharoo('results')" class="six">Kitagawa Utamaro</button>
+                        <button onclick="grade(0); switcharoo('results')" class="seven">Tomioka Tessai</button>
+                        <button onclick="grade(0); switcharoo('results')" class="eight">Sesshū Tōyō</button>
+                        <button onclick="grade(0); switcharoo('results')" class="nine">Kanō Eitoku</button>
+                        <button onclick="grade(1); switcharoo('results')" class="ten">Katsushika Hokusai</button>
+                    </div>  
+                    <p id="boldText">Brief Facts:</p>
+                    <p>The Great Wave off Kanagawa, the woodblock print shown, was created in 1831 and measures about 10.1 inches by 14.9 inches. The print depicts boats on a rough sea with a large wave appearing to form in the center. Due to the fact that it is a woodblock print, it can be found in the Metropolitan Museum of Art, the British Museum, Los Angeles County Museum of Art, and the Tokyo National Museum.</p>
+                    <p>If you look closely at the print, you can see Mount Fuji in the background, barely peaking out over the sea. The print also has western influence, because before this print, proportions were determined on the importance of the subject, but the artist decided to include actual proportions like people in the west. The artist also used Prussian blue, an imported dye that produced more vibrant colors than the usual Japanese indigo.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="results" class="poof page">
+        <div class="topContainer">
+            <header>
+                <h1>
+                    Art Quiz
+                </h1>
+                <nav class="smallHeader">
+                    <a href="javascript:switcharoo('description');">Description</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('question1');">Play the Game!</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('feedback');">Give Feedback</a>
+                    <div id="spacer">_____</div>
+                    <a href="javascript:switcharoo('about');">About</a>
+                </nav>
+            </header>
+            <main>
+                <img src="" id="x">
+                <h2>
+                    Results:
+                </h2>
+                <div id="text">
+                    <div id="match"></div>
+                    <div id="despre"></div>
+                    <p id="boldText">Grades:</p>
+                    <div class="resultContainer">
+                        <div id="ecorrectanswers"></div>
+                        <div id="epercentage"></div>
+                        <div id="elettergrade"></div>
+                        <div id="egpa"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
