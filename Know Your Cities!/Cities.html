@@ -1,0 +1,1550 @@
+<html>
+
+<head>
+    <title>Know Your Cities!</title>
+    <meta name="description" content="Welcome to Know Your Cities! In this game, test your knowledge on geography through pictures. At the end, you can get a score! If you don't know your georgaphy well or you're an expert, you can choose easy, medium, or hard. Enjoy the game!">
+    <link rel="stylesheet" href="Cities.css">
+    <script src="Cities.js" defer> </script>
+    <script type="text/javascript">
+        function showMessage() {
+            alert("You can't navigate away from the quiz.");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="about" class="page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a href="javascript:switcharoo('vtm');" class="titlebuttonone">View the Map</a>
+                    |
+                    <a href="javascript:switcharoo('about');" class="titlebuttontwo">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="journey"><img src="Journey.jpg" width="420" height="630"></div>
+            <div class="subHeaderone">
+                About Us &
+            </div>
+            <div class="subHeadertwo">
+                Our Mission
+            </div>
+            <div class="aboutBody">
+                Nowadays, geography is becoming a lost skill. Some people can't even look at a map and point to
+                 where they live. It's super important for us to learn where cities and towns are around the world
+                  and to identify them from a glance. This coder was motivated to create this website after some-
+                   one said that contintental France was in South America. Seriously. If someone gives you a map
+                   of the world and asks you to point to New York City, Chicago, or Los Angeles, you should already
+                   know where these places are. It's our mission to reteach this lost knowledge and bring geography
+                   back to the stage.
+                <br><br>
+                So, how does the game work? Well, we'll show you a picture of a city, and you'll have to tell us its
+                 name, which country it's in, and what continent it's on. At the end, you'll get your full score! We've
+                  got easy, medium, and hard quizzes, and if you need to look at a map beforehand, select "View the Map"
+                  in the top bar. Are you ready? Click one of the buttons below!
+                <br><br>
+            </div>
+            <button onclick="switcharoo('easyQuestion1'); easyActivated()" class="playGame1"> Easy </button>
+            <button onclick="switcharoo('mediumQuestion1'); mediumActivated()" class="playGame2">Medium</button>
+            <button onclick="switcharoo('hardQuestion1'); hardActivated()" class="playGame3"> Hard </button>
+        </div>
+    </div>
+
+    <div id="vtm" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a href="javascript:switcharoo('vtm');" class="titlebuttonone">View the Map</a>
+                    |
+                    <a href="javascript:switcharoo('about');" class="titlebuttontwo">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="subHeaderone">
+                The World Map
+            </div>
+            <div class="wMap"><img src="Wmap.png"></div>
+            <form action="https://earth.google.com">
+                <button class="gEarth">Google Earth</button>
+            </form>
+            <div class="wDes">If the picture's too blury to read, head over to Google Earth.<br>Click the button on the right to go to the website.</div>
+            <div class="whiteBar">.</div>
+        </div>
+    </div>
+
+    <div id="easyQuestion1" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCParis.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question One:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Berlin</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Chicago</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); oneyea()">Paris</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); onenaw()">Rome</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">Florence</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">Tokyo</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Japan</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">Morocco</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">Italy</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">United States</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twoyea()">France</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Germany</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threeyea()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: It's the capital of a nation shaped like a hexagon.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion2" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCNYC.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Two:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Paris</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Berlin</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Los Angeles</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); onenaw()">London</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); oneyea()">New York City</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">Taipei</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Singapore</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">United Kingdom</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twoyea()">United States</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">France</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twonaw()">Germany</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Italy</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threenaw()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threeyea()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: Seriously? You needed a hint? C'mon.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion3" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCDubai.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Three:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Istanbul</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Seoul</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Florence</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); onenaw()">Austin</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">San Francisco</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); oneyea()">Dubai</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Lebanon</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twoyea()">United Arab Emirates</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">Turkey</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">Botswana</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twonaw()">Switzerland</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">United States</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threenaw()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threeyea()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: It has the tallest building in the whole world.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion4" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCLondon.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Four:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Boston</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Hong Kong</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Paris</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); oneyea()">London</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">Venice</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">Tokyo</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twoyea()">United Kingdom</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">Canada</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">United States</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">China</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twonaw()">Morocco</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Nepal</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threeyea()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: When it's 4pm in this city, it's teatime.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion5" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCWashington.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Five:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Buenos Aires</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">New York City</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Hanoi</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); oneyea()">Washington DC</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">Lagos</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">New Orleans</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Mauritania</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">Canada</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">Dominican Republic</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">Italy</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twoyea()">United States</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Russia</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threenaw()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threeyea()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: It's the capital of a nation with fifty states.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion6" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCSydney.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Six:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Los Angeles</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Chicago</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Denver</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); onenaw()">Manila</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); oneyea()">Sydney</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">Jerusalem</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Morocco</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">United States</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">India</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">Czech Republic</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twoyea()">Australia</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Portugal</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threenaw()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threeyea()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: It's in a nation full of kangaroos and emus.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>    
+
+    <div id="easyQuestion7" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCTaipei.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Seven:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Berlin</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">Tokyo</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Rome</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); onenaw()">Phoenix</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">St. Louis</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); oneyea()">Taipei</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Italy</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twonaw()">Germany</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twoyea()">Taiwan</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">United States</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twonaw()">Japan</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Venezuela</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threenaw()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threeyea()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: It's the capital of a nation south of Japan.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyQuestion8" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCBarcelona.jpg" width="500">
+            </div>
+            <div class="questionHeader">Challenge Question:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a1" onclick="getButtonTop('a1'); onenaw()">Brasília</button>
+                <button class="q1 a2" onclick="getButtonTop('a2'); onenaw()">El Paso</button>
+                <button class="q1 a3" onclick="getButtonTop('a3'); onenaw()">Rome</button>
+                <button class="q1 a4" onclick="getButtonTop('a4'); oneyea()">Barcelona</button>
+                <button class="q1 a5" onclick="getButtonTop('a5'); onenaw()">Lisbon</button>
+                <button class="q1 a6" onclick="getButtonTop('a6'); onenaw()">Istanbul</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b1" onclick="getButtonTop('b1'); twonaw()">Mexico</button>
+                <button class="q2 b2" onclick="getButtonTop('b2'); twoyea()">Spain</button>
+                <button class="q2 b3" onclick="getButtonTop('b3'); twonaw()">Italy</button>
+                <button class="q2 b4" onclick="getButtonTop('b4'); twonaw()">Portugal</button>
+                <button class="q2 b5" onclick="getButtonTop('b5'); twonaw()">United States</button>
+                <button class="q2 b6" onclick="getButtonTop('b6'); twonaw()">Brazil</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c1" onclick="getButtonTop('c1'); threenaw()">Africa</button>
+                <button class="q3 c2" onclick="getButtonTop('c2'); threenaw()">South America</button>
+                <button class="q3 c3" onclick="getButtonTop('c3'); threeyea()">Europe</button>
+                <button class="q3 c4" onclick="getButtonTop('c4'); threenaw()">North America</button>
+                <button class="q3 c5" onclick="getButtonTop('c5'); threenaw()">Asia</button>
+                <button class="q3 c6" onclick="getButtonTop('c6'); threenaw()">Australia</button>
+            </div>
+            <button class="hint" id="hint" onclick="hinting()">Hint: -1.5 Score</button>
+            <button class="clue hidden" id="clue">Hint: The city borders the Mediterranean Sea.</button>
+            <button class="continue" onclick="moveOn(); tallyUp()">Continue</button>
+        </div>
+    </div>
+
+    <div id="easyFinaley" class="poof page">
+        <div class="mainContainer clearfix">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="location.reload()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="location.reload()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="scoreList">
+                <div id="r1">Question One:</div>
+                <div id="r2"><img width=18 src="X.jpg" alt="Incorrect">Paris</div>
+                <div id="r3"><img width=18 src="X.jpg" alt="Incorrect">France</div>
+                <div id="r4"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+                
+                <div id="r5">Question Two:</div>
+                <div id="r6"><img width=18 src="X.jpg" alt="Incorrect">New York City</div>
+                <div id="r7"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r8"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+                
+                <div id="r9">Question Three:</div>
+                <div id="r10"><img width=18 src="X.jpg" alt="Incorrect">Dubai</div>
+                <div id="r11"><img width=18 src="X.jpg" alt="Incorrect">UAE</div>
+                <div id="r12"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+                
+                <div id="r13">Question Four:</div>
+                <div id="r14"><img width=18 src="X.jpg" alt="Incorrect">London</div>
+                <div id="r15"><img width=18 src="X.jpg" alt="Incorrect">United Kingdom</div>
+                <div id="r16"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+                
+                <div id="r17">Question Five:</div>
+                <div id="r18"><img width=18 src="X.jpg" alt="Incorrect">Washington DC</div>
+                <div id="r19"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r20"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+                
+                <div id="r21">Question Six:</div>
+                <div id="r22"><img width=18 src="X.jpg" alt="Incorrect">Sydney</div>
+                <div id="r23"><img width=18 src="X.jpg" alt="Incorrect">Australia</div>
+                <div id="r24"><img width=18 src="X.jpg" alt="Incorrect">Australia</div>
+                
+                <div id="r25">Question Seven:</div>
+                <div id="r26"><img width=18 src="X.jpg" alt="Incorrect">Taipei</div>
+                <div id="r27"><img width=18 src="X.jpg" alt="Incorrect">Taiwan</div>
+                <div id="r28"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+                
+                <div id="r29">Challenge Question:</div>
+                <div id="r30"><img width=18 src="X.jpg" alt="Incorrect">Barcelona</div>
+                <div id="r31"><img width=18 src="X.jpg" alt="Incorrect">Spain</div>
+                <div id="r32"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+            </div>
+            <div class="questionHeader">Results:</div>
+            <div class="resultContainer">
+                <div class="ecorrectanswers"></div>
+                <div class="epercentage"></div>
+                <div class="elettergrade"></div>
+                <br>
+                <div class="selfPromotion">Congratulations! You finished the quiz! If you liked this game,</div>
+                <div class="selfPromotionA">check out more games by HeadCoder21 at Github.com.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mediumQuestion1" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCCopenhagen.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question One:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">Paris</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); oneyea()">Copenhagen</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Berlin</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); onenaw()">Oslo</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); onenaw()">Dublin</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Madrid</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">Norway</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">France</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Germany</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twoyea()">Denmark</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">Ireland</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twonaw()">Spain</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threeyea()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threenaw()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: It's the capital of a nation with many islands.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion2" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCToronto.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Two:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">Frankfurt</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); onenaw()">Buffalo</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Shanghai</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); oneyea()">Toronto</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); onenaw()">Chicago</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Tokyo</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twoyea()">Canada</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Mumbai</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Japan</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twonaw()">Germany</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">United States</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twonaw()">China</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threeyea()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: The city borders one of the Great Lakes.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion3" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCLA.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Three:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">San Francisco</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); onenaw()">Austin</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Portland</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); onenaw()">Orlando</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); oneyea()">Los Angeles</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Tijuana</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">Canada</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Bangladesh</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Columbia</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twoyea()">United States</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">Mexico</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twonaw()">Argentina</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threeyea()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: The city has a very large coast to the Pacific.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion4" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCKL.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Four:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); oneyea()">Kuala Lumpur</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); onenaw()">Taipei</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Singapore</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); onenaw()">Delhi</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); onenaw()">Johannesburg</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Tokyo</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">Thailand</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Taiwan</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Bangladesh</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twonaw()">India</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">Singapore</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twoyea()">Malaysia</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threenaw()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threeyea()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: It's the capital of a nation in Southeast Asia.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion5" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCSeoul.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Five:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">Jakarta</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); oneyea()">Seoul</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Singapore</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); onenaw()">Tokyo</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); onenaw()">Chicago</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Dubai</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">Indonesia</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Philippines</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Japan</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twonaw()">United States</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twoyea()">South Korea</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twonaw()">United Arab Emirates</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threenaw()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threeyea()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: It's the capital of a nation with a big military.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion6" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class="mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCLasVegas.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Six:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">Chicago</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); onenaw()">Columbus</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Paris</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); oneyea()">Las Vegas</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); onenaw()">Macau</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Hong Kong</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">France</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Canada</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">Japan</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twonaw()">South Korea</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">Taiwan</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twoyea()">United States</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threeyea()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: Go to a casino, and poof goes your money.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion7" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class="mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCAuckland.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Seven:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q1 a21" onclick="getButtonTop('a21'); onenaw()">Frankfurt</button>
+                <button class="q1 a22" onclick="getButtonTop('a22'); onenaw()">Johannesburg</button>
+                <button class="q1 a23" onclick="getButtonTop('a23'); onenaw()">Toronto</button>
+                <button class="q1 a24" onclick="getButtonTop('a24'); oneyea()">Auckland</button>
+                <button class="q1 a25" onclick="getButtonTop('a25'); onenaw()">Tokyo</button>
+                <button class="q1 a26" onclick="getButtonTop('a26'); onenaw()">Sydney</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q2 b21" onclick="getButtonTop('b21'); twonaw()">South Africa</button>
+                <button class="q2 b22" onclick="getButtonTop('b22'); twonaw()">Canada</button>
+                <button class="q2 b23" onclick="getButtonTop('b23'); twoyea()">New Zealand</button>
+                <button class="q2 b24" onclick="getButtonTop('b24'); twonaw()">Germany</button>
+                <button class="q2 b25" onclick="getButtonTop('b25'); twonaw()">Australia</button>
+                <button class="q2 b26" onclick="getButtonTop('b26'); twonaw()">Japan</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q3 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q3 c22" onclick="getButtonTop('c22'); threenaw()">South America</button>
+                <button class="q3 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q3 c24" onclick="getButtonTop('c24'); threenaw()">North America</button>
+                <button class="q3 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q3 c26" onclick="getButtonTop('c26'); threeyea()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: It was once in a colony of the British.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumQuestion8" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCRio.jpg" width="500">
+            </div>
+            <div class="questionHeader">Challenge Question:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q21 a21" onclick="getButtonTop('a21'); onenaw()">Tampa Bay</button>
+                <button class="q21 a22" onclick="getButtonTop('a22'); onenaw()">San Francisco</button>
+                <button class="q21 a23" onclick="getButtonTop('a23'); onenaw()">Miami</button>
+                <button class="q21 a24" onclick="getButtonTop('a24'); onenaw()">Florence</button>
+                <button class="q21 a25" onclick="getButtonTop('a25'); oneyea()">Rio de Janeiro</button>
+                <button class="q21 a26" onclick="getButtonTop('a26'); onenaw()">Capetown</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q22 b21" onclick="getButtonTop('b21'); twonaw()">Argentina</button>
+                <button class="q22 b22" onclick="getButtonTop('b22'); twonaw()">Italy</button>
+                <button class="q22 b23" onclick="getButtonTop('b23'); twonaw()">United States</button>
+                <button class="q22 b24" onclick="getButtonTop('b24'); twoyea()">Brazil</button>
+                <button class="q22 b25" onclick="getButtonTop('b25'); twonaw()">South Africa</button>
+                <button class="q22 b26" onclick="getButtonTop('b26'); twonaw()">Greece</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q23 c21" onclick="getButtonTop('c21'); threenaw()">Africa</button>
+                <button class="q23 c22" onclick="getButtonTop('c22'); threeyea()">South America</button>
+                <button class="q23 c23" onclick="getButtonTop('c23'); threenaw()">Europe</button>
+                <button class="q23 c24" onclick="getButtonTop('c24'); threenaw()">North America</button>
+                <button class="q23 c25" onclick="getButtonTop('c25'); threenaw()">Asia</button>
+                <button class="q23 c26" onclick="getButtonTop('c26'); threenaw()">Australia</button>
+            </div>
+            <button class="hint2" id="hint2" onclick="hinting2()">Hint: -1.5 Score</button>
+            <button class="clue2 hidden" id="clue2">Hint: The city has a bay going into the Atlantic Ocean.</button>
+            <button class="continue" onclick="moveOn(); tallyUp()">Continue</button>
+        </div>
+    </div>
+
+    <div id="mediumFinaley" class="poof page">
+        <div class="mainContainer clearfix">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="location.reload()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="location.reload()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="scoreList">
+                <div id="r1">Question One:</div>
+                <div id="r2"><img width=18 src="X.jpg" alt="Incorrect">Copenhagen</div>
+                <div id="r3"><img width=18 src="X.jpg" alt="Incorrect">Denmark</div>
+                <div id="r4"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+
+                <div id="r5">Question Two:</div>
+                <div id="r6"><img width=18 src="X.jpg" alt="Incorrect">Toronto</div>
+                <div id="r7"><img width=18 src="X.jpg" alt="Incorrect">Canada</div>
+                <div id="r8"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r9">Question Three:</div>
+                <div id="r10"><img width=18 src="X.jpg" alt="Incorrect">Los Angeles</div>
+                <div id="r11"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r12"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r13">Question Four:</div>
+                <div id="r14"><img width=18 src="X.jpg" alt="Incorrect">Kuala Lumpur</div>
+                <div id="r15"><img width=18 src="X.jpg" alt="Incorrect">Malaysia</div>
+                <div id="r16"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+
+                <div id="r17">Question Five:</div>
+                <div id="r18"><img width=18 src="X.jpg" alt="Incorrect">Seoul</div>
+                <div id="r19"><img width=18 src="X.jpg" alt="Incorrect">South Korea</div>
+                <div id="r20"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+
+                <div id="r21">Question Six:</div>
+                <div id="r22"><img width=18 src="X.jpg" alt="Incorrect">Las Vegas</div>
+                <div id="r23"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r24"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r25">Question Seven:</div>
+                <div id="r26"><img width=18 src="X.jpg" alt="Incorrect">Auckland</div>
+                <div id="r27"><img width=18 src="X.jpg" alt="Incorrect">New Zealand</div>
+                <div id="r28"><img width=18 src="X.jpg" alt="Incorrect">Australia</div>
+
+                <div id="r29">Challenge Question:</div>
+                <div id="r30"><img width=18 src="X.jpg" alt="Incorrect">Rio de Janeiro</div>
+                <div id="r31"><img width=18 src="X.jpg" alt="Incorrect">Brazil</div>
+                <div id="r32"><img width=18 src="X.jpg" alt="Incorrect">South America</div>
+            </div>
+            <div class="questionHeader">Results:</div>
+            <div class="resultContainer">
+                <div class="ecorrectanswers"></div>
+                <div class="epercentage"></div>
+                <div class="elettergrade"></div>
+                <br>
+                <div class="selfPromotion">Congratulations! You finished the quiz! If you liked this game,</div>
+                <div class="selfPromotionA">check out more games by HeadCoder21 at Github.com.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hardQuestion1" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCRey.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question One:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Copenhagen</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Juneau</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); oneyea()">Reykjavik</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Oslo</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Zermatt</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Nuuk</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Denmark</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Greenland</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twoyea()">Iceland</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Switzerland</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Norway</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">United States</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threeyea()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threenaw()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: The city is very close to the Arctic Circle.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion2" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCMinneapolis.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Two:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); oneyea()">Minneapolis</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Dallas</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Saint Paul</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Munich</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Los Angeles</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Lille</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Canada</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twoyea()">United States</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twonaw()">France</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">United Kingdom</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Mexico</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">Germany</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threeyea()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: This city is next to a well-known body of water.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion3" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCCapetown.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Three:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Catania</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Santiago</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Tunis</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Montevideo</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); oneyea()">Capetown</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Haifa</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Tunisia</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Israel</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twoyea()">South Africa</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Chile</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Paraguay</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">Italy</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threeyea()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threenaw()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: This city is the capital of its country.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion4" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCTelAviv.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Four:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Lima</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Mumbai</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Miami</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Singapore</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Cancun</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); oneyea()">Tel Aviv</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Singapore</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twoyea()">Israel</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twonaw()">United States</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Mexico</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Peru</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">India</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threenaw()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threeyea()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: Most of the buildings in this city are new.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion5" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCMadison.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Five:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">St David's</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Winnipeg</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Jefferson City</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); oneyea()">Madison</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Edmonton</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Colmar</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Netherlands</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Germany</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twonaw()">United Kingdom</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Canada</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twoyea()">United States</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">France</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threeyea()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: This city is a capital of a state or province.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion6" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCVilnius.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Six:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Riga</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); oneyea()">Vilnius</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Minsk</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Kharkiv</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Munich</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Warsaw</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twoyea()">Lithuania</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Germany</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twonaw()">Ukraine</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Poland</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Belarus</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">Latvia</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threeyea()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threenaw()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: This city is an Eastern European capital.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion7" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCAnchorage.jpg" width="500">
+            </div>
+            <div class="questionHeader">Question Seven:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Nuuk</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Yellowknife</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); onenaw()">Reykjavík</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Fairbanks</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Bergen</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); oneyea()">Anchorage</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Iceland</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Canada</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twoyea()">United States</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Norway</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twonaw()">Greenland</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">Sweeden</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threeyea()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threenaw()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: The city is located right next to an inlet.</button>
+            <button class="continue" onclick="moveOn()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardQuestion8" class="poof page">
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="showMessage()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="showMessage()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="questionImage">
+                <img src="KYCManila.jpg" width="500">
+            </div>
+            <div class="questionHeader">Challenge Question:</div>
+            <div class="questionTop">Part 1: What is this city?</div>
+            <div class="buttonContainer" id="topSet">
+                <button class="q31 a31" onclick="getButtonTop('a31'); onenaw()">Jakarta</button>
+                <button class="q31 a32" onclick="getButtonTop('a32'); onenaw()">Singapore</button>
+                <button class="q31 a33" onclick="getButtonTop('a33'); oneyea()">Manila</button>
+                <button class="q31 a34" onclick="getButtonTop('a34'); onenaw()">Hanoi</button>
+                <button class="q31 a35" onclick="getButtonTop('a35'); onenaw()">Dhaka</button>
+                <button class="q31 a36" onclick="getButtonTop('a36'); onenaw()">Bangkok</button>
+            </div>
+            <div class="questionMB">Part 2: What country is it in?</div>
+            <div class="buttonContainer" id="midSet">
+                <button class="q32 b31" onclick="getButtonTop('b31'); twonaw()">Thailand</button>
+                <button class="q32 b32" onclick="getButtonTop('b32'); twonaw()">Vietnam</button>
+                <button class="q32 b33" onclick="getButtonTop('b33'); twonaw()">Bangladesh</button>
+                <button class="q32 b34" onclick="getButtonTop('b34'); twonaw()">Indonesia</button>
+                <button class="q32 b35" onclick="getButtonTop('b35'); twoyea()">Philippines</button>
+                <button class="q32 b36" onclick="getButtonTop('b36'); twonaw()">Singapore</button>
+            </div>
+            <div class="questionMB">Part 3: Which continent is it on?</div>
+            <div class="buttonbContainer" id="lowSet">
+                <button class="q33 c31" onclick="getButtonTop('c31'); threenaw()">Africa</button>
+                <button class="q33 c32" onclick="getButtonTop('c32'); threenaw()">South America</button>
+                <button class="q33 c33" onclick="getButtonTop('c33'); threenaw()">Europe</button>
+                <button class="q33 c34" onclick="getButtonTop('c34'); threenaw()">North America</button>
+                <button class="q33 c35" onclick="getButtonTop('c35'); threeyea()">Asia</button>
+                <button class="q33 c36" onclick="getButtonTop('c36'); threenaw()">Australia</button>
+            </div>
+            <button class="hint3" id="hint3" onclick="hinting3()">Hint: -1.5 Score</button>
+            <button class="clue3 hidden" id="clue3">Hint: There was a very big battle at this city in WWII.</button>
+            <button class="continue" onclick="moveOn(); tallyUp()">Continue</button>
+        </div>
+    </div>
+
+    <div id="hardFinaley" class="poof page">
+        <div class="mainContainer clearfix">
+            <div class="topContainer">
+                <div class="globe"><img src="Globe-1.webp" width="60" height="60"></div>
+                <header>
+                <div class= "mainHeader"><h1>Know Your Cities !</h1></div>
+                </header>
+                <div class="smallHeader">
+                    <a class="titlebuttonone" onclick="location.reload()">View the Map</a>
+                    |
+                    <a class="titlebuttontwo" onclick="location.reload()">About</a>
+                </div>
+            </div>
+            <div class="theLine">.</div>
+            <div class="scoreList">
+                <div id="r1">Question One:</div>
+                <div id="r2"><img width=18 src="X.jpg" alt="Incorrect">Reykjavik</div>
+                <div id="r3"><img width=18 src="X.jpg" alt="Incorrect">Iceland</div>
+                <div id="r4"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+
+                <div id="r5">Question Two:</div>
+                <div id="r6"><img width=18 src="X.jpg" alt="Incorrect">Minneapolis</div>
+                <div id="r7"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r8"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r9">Question Three:</div>
+                <div id="r10"><img width=18 src="X.jpg" alt="Incorrect">Capetown</div>
+                <div id="r11"><img width=18 src="X.jpg" alt="Incorrect">South Africa</div>
+                <div id="r12"><img width=18 src="X.jpg" alt="Incorrect">Africa</div>
+
+                <div id="r13">Question Four:</div>
+                <div id="r14"><img width=18 src="X.jpg" alt="Incorrect">Tel Aviv</div>
+                <div id="r15"><img width=18 src="X.jpg" alt="Incorrect">Israel</div>
+                <div id="r16"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+
+                <div id="r17">Question Five:</div>
+                <div id="r18"><img width=18 src="X.jpg" alt="Incorrect">Madison</div>
+                <div id="r19"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r20"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r21">Question Six:</div>
+                <div id="r22"><img width=18 src="X.jpg" alt="Incorrect">Vilnius</div>
+                <div id="r23"><img width=18 src="X.jpg" alt="Incorrect">Lithuania</div>
+                <div id="r24"><img width=18 src="X.jpg" alt="Incorrect">Europe</div>
+
+                <div id="r25">Question Seven:</div>
+                <div id="r26"><img width=18 src="X.jpg" alt="Incorrect">Anchorage</div>
+                <div id="r27"><img width=18 src="X.jpg" alt="Incorrect">United States</div>
+                <div id="r28"><img width=18 src="X.jpg" alt="Incorrect">North America</div>
+
+                <div id="r29">Challenge Question:</div>
+                <div id="r30"><img width=18 src="X.jpg" alt="Incorrect">Manila</div>
+                <div id="r31"><img width=18 src="X.jpg" alt="Incorrect">Philippines</div>
+                <div id="r32"><img width=18 src="X.jpg" alt="Incorrect">Asia</div>
+            </div>
+            <div class="questionHeader">Results:</div>
+            <div class="resultContainer">
+                <div class="ecorrectanswers"></div>
+                <div class="epercentage"></div>
+                <div class="elettergrade"></div>
+                <br>
+                <div class="selfPromotion">Congratulations! You finished the quiz! If you liked this game,</div>
+                <div class="selfPromotionA">check out more games by HeadCoder21 at Github.com.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="column1">
+            Photo Authors:
+            <br>DariuszSankowski
+            <br>USA-Reiseblogger
+        </div>
+        <div class="columnLeft">
+            The CIA
+            <br>edmondlafoto
+            <br>Pexels
+            <br>shutterbean
+        </div>
+        <div class="columnLeft">
+            12019
+            <br>monikawl999
+            <br>stanbalik
+            <br>jarmoluk
+        </div>
+        <img class="mainImage" src="HC21Logo.jpg" width="110">
+        <div class="columnRight">
+            TranThangNhat
+            <br>Peggy_Marco
+            <br>zephylwer0
+        </div>
+        <div class="columnRight">
+            StockSnap
+            <br>cmmellow
+            <br>Walkerssk
+            <br>nadine_simoner
+        </div>
+        <div class="column2">
+            MemoTravels
+            <br>pbat34
+            <br>gloverbh222
+            <br>sharonang
+        </div>
+    </div>
+
+</body>
+
+</html>
